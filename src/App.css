@@ -1,3 +1,8 @@
+*{
+  background-color:rgb(141, 141, 247);
+}
+
+
 .App {
   text-align: center;
 }
@@ -14,7 +19,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #306be2;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -35,4 +40,21 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+
+.body {
+  background-color:rgb(141, 141, 247);
+
+}
+
+h1{
+  font-family: 'Cream Cake';
+  font-size: 75px;
+}
+
+h3 {
+  font-family: 'Cream Cake';
+  font-size: 38px;
+  font-stretch: expanded;
 }
