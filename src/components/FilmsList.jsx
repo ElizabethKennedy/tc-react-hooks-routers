@@ -1,18 +1,17 @@
+import { response } from 'express';
 import React, { useState, useEffect } from 'react';
 import './FilmsList.css';
 
 function FilmsList (props){
 
-    const [list, setList] = useState([]);
+    let [list, setList] = useState([]);
 
-async function getFilms (){
-    try{
-        let res = await fetch('https://ghibliapi.herokuapp.com/films');
-        let films = await res.json();
-        setList(films);
-    } catch (e){
-        console.error(e);
-    }
+function getFilms (){
+    fetch('https://ghibliapi.herokuapp.com/films');
+    .then((resonse) => response.json())
+    .then((films => setList(films))
+    .catch ((error) => console.error(error));
+    
 }
 
 useEffect(() => {

@@ -51,10 +51,12 @@
 h1{
   font-family: 'Cream Cake';
   font-size: 75px;
+  text-align: center;
 }
 
 h3 {
   font-family: 'Cream Cake';
   font-size: 38px;
   font-stretch: expanded;
+  text-align:center;
 }

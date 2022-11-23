@@ -13,8 +13,8 @@ setList([...list, text]);
 
   return (
     <div className="App">
-      <h1>Welcome to Ghibli Studios</h1>
-      <h3>Search for your favorite film titles here:</h3>
+      <h1></h1>
+      <h3></h3>
       <form onSubmit={onSubmit}>
       <input
             type="text"
