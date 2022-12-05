@@ -1,8 +1,8 @@
 /**
  * returns a filtered array of movies
- * @param {Array}
- * @param {String}  
- * @returns {Array} 
+ * @param {Array} list
+ * @param {string} director
+ * @returns {Array} filteredList
  */
 
  export function filterFilmsByDirector(list, searchDirector){
@@ -10,12 +10,50 @@
 }
 
 /**
- 
- * @param {Array} 
- * @param {Array} 
- * @returns {Array}
+ * gets the list of directors filtered from the total api json object
+ * @param {Array} list (array)
+ * @param {Array} prop (property of object to get)
+ * @returns {Array} list of directors
  */
 
 export function getListOf(list, prop){
-    return [...new Set(list.map((film) => film[prop] || ""))];
+    return [...new Set(list.map((film) => film[prop]))];
+}
+
+
+/**
+ *
+ * @param {Object} list returns film stats
+ * @returns
+ */
+
+export function getFilmStats(list){
+const arr = [...list];
+    if (arr.length <= 0){
+        return {
+            sum: 0,
+            avg_score: 0,
+            total: 0,
+            latest: 1600
+        }
+    }
+
+
+    const sum = arr.reduce((a, c) => {
+        return a + c.rt_score}, 0 );
+
+const avg_score = sum / arr.length;
+const total = arr.length;
+
+const latest = arr.sort((a, b) => {
+    return a.release_date - b.release_date
+})[0];
+
+return {
+    sum,
+    avg_score,
+    total,
+    latest: latest.release_date
+}
+
 }

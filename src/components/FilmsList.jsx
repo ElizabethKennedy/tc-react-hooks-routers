@@ -6,40 +6,27 @@ export default FilmsList;
 function FilmsList(props) {
   let [list, setList] = useState([]);
 
-  function getFilms() {
-    fetch("https://ghibliapi.herokuapp.com/films")
-      .then((response) => response.json())
-      .then((films) => setList(films))
-      .catch((error) => console.error(error));
-  }
-
-  useEffect(() => {
-    getFilms();
-  }, []);
-
-  return (
-    <div>
-      <h1>Studio Ghibli Films</h1>
-      <ul>
-        {list.map((film) => {
-          return (
-            <li key={film.id}>
-              <h2>{film.title}</h2> <br />
-              <img
-                src={film.image}
-                alt="Movie Poster"
-                className="FilmsList-img"
-              />
-              <br />{" "}
-              <span className="light-text">
-                <i>{film.description}</i>
-              </span>
-            </li>
-          );
-        })}
-        ;
-      </ul>
-    </div>
-  );
+  async function getFilms (){
+    try{
+        let res = await fetch('https://ghibliapi.herokuapp.com/films', {mode: 'no-cors'});
+        let films = await res.json();
+        setList(films);
+    } catch (e){
+        console.error(e);
+    }
 }
 
+useEffect(() => {
+    getFilms();
+}, []);
+
+
+        return (
+        <ul>
+            {list.map((ele) => {
+               return <li key={ele.id}><h2>{ele.title}</h2> <br /> <img src={ele.image} alt="Movie Poster" className="filmsList-img" /> <br /> <span className='light-text'><i>{ele.description}</i></span> </li>
+            })};
+
+        </ul>
+        );
+}

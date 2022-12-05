@@ -1,0 +1,38 @@
+.body {
+  background-color:rgb(141, 141, 247);
+
+}
+
+h1{
+  font-family: 'Cream Cake';
+  font-size: 75px;
+  text-align: center;
+}
+
+h3 {
+  font-family: 'Cream Cake';
+  font-size: 38px;
+  font-stretch: expanded;
+  text-align:center;
+}
+
+.filmsList-img {
+  height: 20vh;
+  box-shadow: 5px 5px 15px rgba(0,0,0, 0.5);
+  margin-bottom: 20px;
+}
+h2 {
+  text-shadow: 2px 4px 5px rgba(0, 0, 0, 0.9);
+  margin-block-end: 0.2em;
+  opacity: 0.75;
+}
+.light-text {
+  opacity: 0.6;
+  box-shadow:none;
+}
+li {
+  list-style:none;
+}
+#movieSearch {
+  margin-left:10px;
+}
