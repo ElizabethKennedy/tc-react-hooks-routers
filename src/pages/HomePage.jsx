@@ -14,7 +14,7 @@ setList([...list, text]);
   return (
     <div className="App">
       <h1>The Studio Ghibli Collection</h1>
-      <h3>Search for your favorite Studio Ghibli film titles here:</h3>
+      <h3><span>❤</span> Search for your favorite Studio Ghibli film titles here:<span>❤</span> </h3>
       <form onSubmit={onSubmit}>
       <input
             type="text"

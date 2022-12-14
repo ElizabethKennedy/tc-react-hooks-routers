@@ -6,7 +6,9 @@ html {
 
 }
 
-
+#submit {
+  justify-content: center;
+}
 
 /* from original css file resulting from initializing react app*/
 body {
