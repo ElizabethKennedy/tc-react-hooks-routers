@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "../App.css";
-import '../components/filmsList.css';
+import './components/FilmsList.css';
 import { filterFilmsByDirector, getListOf, getFilmStats } from '../helpers/film.helpers.js';
 import { Link } from 'react-router-dom';
 
@@ -11,7 +11,7 @@ export default function FilmsPage (props){
 
 async function getFilms (){
     try{
-        let res = await fetch('https://ghibliapi.herokuapp.com/films', { mode: 'no-cors' });
+        let res = await fetch('https://studioghibliapi-d6fc8.web.app/films', { mode: 'no-cors' });
         let films = await res.json();
         setList(films);
     } catch (e){
@@ -38,7 +38,7 @@ function onSubmit(event){
 
         return (
         <>
-            <h1>Studio Ghibli Films</h1><div>
+            <h1>The Studio Ghibli Collection</h1><div>
             <form className="form-group" onSubmit={onSubmit}>
                 <label htmlFor="searchDirector">Select a director:</label>
                  <select

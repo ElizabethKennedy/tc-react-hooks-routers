@@ -1,4 +1,5 @@
-import { HomePage } from "./pages/home.page";
-import { FilmsPage } from "./pages/films.page";
+import { HomePage } from "./pages/HomePage.jsx";
+import { FilmsPage } from "./pages/FilmsPage.jsx";
+import { SingleFilmPage } from "./pages/SingleFilmPage.jsx";
 
-export { HomePage, FilmsPage };
+export { HomePage, FilmsPage, SingleFilmPage };

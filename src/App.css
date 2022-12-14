@@ -15,7 +15,13 @@ h3 {
   font-stretch: expanded;
   text-align:center;
 }
+#myDIV {
+  animation: mymove 5s infinite;
+}
 
+@keyframes mymove {
+  50% {text-shadow: 10px 20px 30px blue;}
+}
 .filmsList-img {
   height: 20vh;
   box-shadow: 5px 5px 15px rgba(0,0,0, 0.5);
