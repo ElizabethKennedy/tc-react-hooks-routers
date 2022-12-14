@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "../App.css";
-import './components/FilmsList.css';
+import './FilmsList.style.css';
 import { filterFilmsByDirector, getListOf, getFilmStats } from '../helpers/film.helpers.js';
 import { Link } from 'react-router-dom';
 
