@@ -1,6 +1,6 @@
 import "./mainlayout.css";
 import { SideNav } from "../sidenav/sidenav.component";
-import { TopNav } from "../topnav/topnav.component";
+import { TopNav } from "./components/layout/topnav/topnav.component";
 import { Container } from "react-bootstrap";
 
 

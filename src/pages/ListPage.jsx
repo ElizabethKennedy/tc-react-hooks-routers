@@ -2,7 +2,7 @@ import { useState } from "react";
 import { MainLayout } from "../components";
 import { useList } from "../hooks";
 
-export function ListPage() {
+export default function ListPage() {
   const [task, setTask] = useState("");
 
   const { list, addItem } = useList();
