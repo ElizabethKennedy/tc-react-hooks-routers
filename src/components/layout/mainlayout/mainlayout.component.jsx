@@ -1,6 +1,7 @@
 import "./mainlayout.css";
 import { SideNav } from "../sidenav/sidenav.component";
 import { TopNav } from "../topnav/topnav.component";
+import { Container } from "react-bootstrap";
 
 
 export function MainLayout({ children }) {
@@ -9,8 +10,10 @@ export function MainLayout({ children }) {
       <TopNav />
        <div className="base">
         <SideNav />
-        <div className="content">{children}</div>
+        <Container>
+        <div className="my-4">{children}</div>
+        </Container>
       </div>
-    </div>
-  );
+      </div>
+      );
 }
